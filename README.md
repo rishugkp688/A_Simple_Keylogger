@@ -36,7 +36,7 @@ Key pressed: C
 
 ### ✅ Requirements
 
-- Go 1.18 or later
+- Go 1.24 or later
 - Windows OS (tested on Windows 10/11)
 
 ### 🧾 Instructions
